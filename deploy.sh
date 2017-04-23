@@ -11,5 +11,5 @@ if [ -z ${STAGE+x} ]; then
   exit 0;
 fi
 echo "Deploying from branch $BRANCH to stage $STAGE"
-npm prune --production  #remove devDependencies
+#npm prune --production  #remove devDependencies
 azureSubId=$AZURE_SUBSCRIPTION_ID azureServicePrincipalTenantId=$AZURE_SERVICE_PRINCIPAL_TENANT_ID azureservicePrincipalClientId=$AZURE_SERVICE_PRINCIPAL_CLIENT_ID azureServicePrincipalPassword=$AZURE_SERVICE_PRINCIPAL_PASSWORD SLS_DEBUG=true serverless deploy --stage $STAGE
