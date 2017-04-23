@@ -4,7 +4,6 @@ node_js:
 env:
   global:
     - location=West US
-    - SLS_DEBUG=true
 before_install:
   - npm i -g serverless
 script: ./deploy.sh
