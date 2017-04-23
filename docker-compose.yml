@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  azure:
+    image: microsoft/azure-cli
+    volumes:
+      - .:/home
+    working_dir: /home
+    command: /bin/bash
